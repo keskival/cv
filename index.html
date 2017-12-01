@@ -2,10 +2,6 @@
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-<script type="text/javascript" src="//platform.linkedin.com/in.js">
-  api_key: 86ihnol38k2bfy
-  onLoad: onLoad
-</script>
 </head>
 <body>
 
@@ -20,8 +16,8 @@ const programmingLanguages = [
   "C++",
   "Scala",
   "Erlang",
-  "DBase",
-  "Basic",
+  "dBase",
+  "BASIC",
   "Pascal",
   "Fortran",
   "Lisp",
@@ -29,18 +25,160 @@ const programmingLanguages = [
   "Matlab/Octave",
   "UnityScript",
   "J",
-  "Ruby"
+  "Ruby",
+  "Ada",
+  "C64 Assembly",
+  "Dynamic C",
+  "Perl",
+  "SPARC Assembly",
+  "HTML/CSS",
+  "Rapid",
+  "RDF",
+  "XML"
 ];
 
-function onLoad() {
-  console.log("Loaded.");
-}
+const orgs = {
+  "Kirkon Ala-aste": [
+    "C64 Assembly",
+    "BASIC"
+  ],
+  "Kurikan Yläaste, Lukio": [
+    "Pascal",
+    "Java",
+    "JavaScript"
+  ],
+  "Kurikan Kaupunki": [
+    "HTML/CSS",
+    "Java",
+    "JavaScript"
+  ],
+  "Turvavartiointi M. Savela Ky": [
+    "dBase"
+  ],
+  "Tampere University of Technology": [
+    "C++",
+    "Java",
+    "J",
+    "Ada",
+    "Fortran",
+    "Matlab/Octave",
+    "Lisp",
+    "Prolog",
+    "SPARC Assembly",
+    "ESSI",
+    "JavaScript",
+    "R"
+  ],
+  "Roboteam": [
+    "Rapid",
+    "C++",
+    "Matlab/Octave"
+  ],
+  "Finnpos Systems Oy": [
+    "Java",
+    "HTML/CSS",
+    "XML",
+    "Dynamic C",
+    "JavaScript"
+  ],
+  "Elektrobit Oyj": [
+    "Java",
+    "C",
+    "Python",
+    "Perl",
+    "Erlang",
+    "RDF",
+    "Matlab/Octave",
+    "JavaScript"
+  ],
+  "Nice-business Solutions Oy": [
+    "Java",
+    "Python",
+    "Perl",
+    "Scala",
+    "PHP",
+    "HTML/CSS",
+    "Ruby",
+    "JavaScript"
+  ],
+  "Neter": [
+    "Ruby",
+    "Java",
+    "HTML/CSS",
+    "Python",
+    "JavaScript"
+  ],
+  "Cybercom Finland Oy": [
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Matlab/Octave",
+    "Ruby",
+    "UnityScript",
+    "R"
+  ]
+};
+
+const projects = [];
+
+const epochs = {
+  "1989–1994": ["Kirkon Ala-aste"],
+  "1995–2000": ["Kurikan Yläaste, Lukio", "Kurikan Kaupunki", "Turvavartiointi M. Savela Ky"],
+  "2001–2008": ["Roboteam", "Finnpos Systems Oy", "Tampere University of Technology", "Elektrobit Oyj"],
+  "2009–2012": ["Elektrobit Oyj", "Nice-business Solutions Oy", "Neter"],
+  "2012–": ["Neter", "Cybercom Finland Oy"]
+};
+
+const timeline = ["1989–1994", "1995–2000", "2001–2008", "2009–2012", "2012–"];
+
+const skills = [
+  "3D modelling"
+];
+
+const tools = [];
 
 $(function() {
+  console.log(JSON.stringify(orgs));
+  const langNodes = [... new Set(programmingLanguages.concat(Object.keys(orgs).map(k => orgs[k]).reduce((x, y) => x.concat(y), [])))];
+  const orgNodes = Object.keys(orgs);
+  const epochNodes = Object.keys(epochs);
+  const nodes =
+    langNodes.map(l => ({id: l, label: l, group: 1})).concat(
+    orgNodes.map(o => ({id: o, label: o, group: 2}))).concat(
+    epochNodes.map(e => ({id: e, label: e, group: 3})));
+  
+  const pairwiseTimeline = [];
+  for (let i = 1; i < timeline.length; i++) {
+    pairwiseTimeline.push([timeline[i-1], timeline[i]]);
+  }
+  
+  const edges = Object.keys(orgs)
+    .map(o => orgs[o].map(l => [o, l]))
+    .reduce((x, y) => x.concat(y), [])
+    .concat(
+      Object.keys(epochs)
+      .map(e => epochs[e].map(o => [e, o]))
+      .reduce((x, y) => x.concat(y), []))
+    .concat(
+      pairwiseTimeline
+    );
+  
+  const visNodes = new vis.DataSet(nodes);
+  const visEdges = new vis.DataSet(edges.map(e => ({from: e[0], to: e[1]})));
+  // create a network
+  const container = document.getElementById('vis');
+  const data = {
+    nodes: visNodes,
+    edges: visEdges
+  };
+  const options = {};
+  const network = new vis.Network(container, data, options);
 });
 
 </script>
-
+<h1>Programming languages</h1>
+<p>Please note that this is work in progress, and while all information is correct, it is not necessarily exhaustive.</p>
 <div id="vis"></div>
 </body>
 </html>
