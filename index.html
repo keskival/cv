@@ -384,7 +384,7 @@ function getOrganizationConnections() {
   } else if (showLanguages) {
     const projectEdges = Object.keys(orgs).map(o => [... new Set(fromOrgToProjects.get(o).filter(p => p != null).map(p => projects[p].langs)
       .reduce((x, y) => x.concat(y), []))]
-      .map(l => [o, l])).reduce((x, y) => x.concat(y), []);
+      .map(l => [l, o])).reduce((x, y) => x.concat(y), []);
     return languagesEdges.concat(
       projectEdges);
   } else {
