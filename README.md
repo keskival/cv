@@ -1,4 +1,4 @@
-== Because We Can
+## Because We Can
 
 This is Tero Keski-Valkama's CV repository.
 
