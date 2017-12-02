@@ -405,6 +405,11 @@ function getProjectConnections() {
 }
 
 function redraw() {
+  showEpochs = $("#cbEpochs").is(":checked");
+  showOrgs = $("#cbOrgs").is(":checked");
+  showProjects = $("#cbProjects").is(":checked");
+  showLanguages = $("#cbLanguages").is(":checked");
+  
   const langNodes = [... new Set(
       Object.keys(orgs).map(k => orgs[k]).reduce((x, y) => x.concat(y), []).concat(
           Object.keys(projects).map(k => projects[k].langs).reduce((x, y) => x.concat(y), [])
@@ -446,10 +451,10 @@ function redraw() {
 
 $(function() {
   redraw();
-  $("#cbEpochs").change(() => {showEpochs = !showEpochs; redraw();});
-  $("#cbOrgs").change(() => {showOrgs = !showOrgs; redraw();});
-  $("#cbProjects").change(() => {showProjects = !showProjects; redraw();});
-  $("#cbLanguages").change(() => {showLanguages = !showLanguages; redraw();});
+  $("#cbEpochs").change(() => {redraw();});
+  $("#cbOrgs").change(() => {redraw();});
+  $("#cbProjects").change(() => {redraw();});
+  $("#cbLanguages").change(() => {redraw();});
 });
 
 </script>
