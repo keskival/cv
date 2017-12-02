@@ -7,35 +7,6 @@
 
 <script>
 
-const programmingLanguages = [
-  "JavaScript",
-  "TypeScript",
-  "Java",
-  "Python",
-  "C",
-  "C++",
-  "Scala",
-  "Erlang",
-  "dBase",
-  "BASIC",
-  "Pascal",
-  "Fortran",
-  "Lisp",
-  "R",
-  "Matlab/Octave",
-  "UnityScript",
-  "J",
-  "Ruby",
-  "Ada",
-  "C64 Assembly",
-  "Dynamic C",
-  "Perl",
-  "SPARC Assembly",
-  "HTML/CSS",
-  "Rapid",
-  "RDF"
-];
-
 const orgs = {
   "Kirkon Ala-aste": [
     "C64 Assembly",
@@ -48,12 +19,8 @@ const orgs = {
     "SQL"
   ],
   "Kurikan Kaupunki": [
-    "HTML/CSS",
-    "Java",
-    "JavaScript"
   ],
   "Turvavartiointi M. Savela Ky": [
-    "dBase"
   ],
   "Tampere University of Technology": [
     "C++",
@@ -69,66 +36,238 @@ const orgs = {
     "JavaScript",
     "R",
     "Perl",
-    "SQL"
+    "SQL",
+    "LaTeX",
+    "DOT"
   ],
   "Roboteam": [
+  ],
+  "Finnpos Systems Oy": [
+  ],
+  "Elektrobit Oyj": [
+  ],
+  "Nice-business Solutions Oy": [
+  ],
+  "Neter": [
+  ],
+  "Cybercom Finland Oy": [
+  ]
+};
+
+const projects = {
+  "Kurikan Ryhti homepages and TV ads": {
+    "org": "Kurikan Kaupunki",
+    "langs": [
+      "JavaScript",
+      "HTML/CSS"
+  ]},
+  "Programming courses for 10-14 year-olds": {
+    "org": "Kurikan Kaupunki",
+    "langs": [
+      "Java",
+      "HTML/CSS"
+  ]},
+  "Eurobot": {
+    "org": "Roboteam",
+    "langs": [
+    "C++",
+    "Matlab/Octave",
+    "LaTeX"
+  ]},
+  "Robotic Bartender": {
+    "org": "Roboteam",
+    "langs": [
     "Rapid",
     "C++",
     "Matlab/Octave"
-  ],
-  "Finnpos Systems Oy": [
-    "Java",
-    "HTML/CSS",
+  ]},
+  "Finnpos F2": {
+    "org": "Finnpos Systems Oy",
+    "langs": [
     "Dynamic C",
-    "JavaScript",
     "Perl",
-    "SQL"
-  ],
-  "Elektrobit Oyj": [
+    "HTML/CSS"
+  ]},
+  "Finnpos F3": {
+    "org": "Finnpos Systems Oy",
+    "langs": [
+    "Java"
+  ]},
+  "Linux driver, LG touchscreen": {
+    "org": "Finnpos Systems Oy",
+    "langs": [
+    "C"
+  ]},
+  "VoIP System": {
+    "org": "Finnpos Systems Oy",
+    "langs": [
+    "C++",
+    "Java"
+  ]},
+  "Crypto infrastructure": {
+    "org": "Finnpos Systems Oy",
+    "langs": [
     "Java",
+    "SQL",
+    "LaTeX"
+  ]},
+  "Datamike billing/accounting": {
+    "org": "Turvavartiointi M. Savela Ky",
+    "langs": [
+    "xBase"
+  ]},
+  "Rene RNC HSPA": {
+    "org": "Elektrobit Oyj",
+    "langs": [
     "C",
+    "Python",
+    "Perl",
+    "LaTeX",
+    "DOT"
+  ]},
+  "Carbook": {
+    "org": "Elektrobit Oyj",
+    "langs": [
+    "Java",
     "Python",
     "Perl",
     "Erlang",
     "RDF",
-    "Matlab/Octave",
     "JavaScript",
-    "SQL"
-  ],
-  "Nice-business Solutions Oy": [
+    "SQL",
+    "LaTeX"
+  ]},
+  "Identity Federation": {
+    "org": "Nice-business Solutions Oy",
+    "langs": [
+    "Perl",
     "Java",
     "Python",
-    "Perl",
-    "Scala",
-    "PHP",
     "HTML/CSS",
     "Ruby",
+    "JavaScript"
+  ]},
+  "B2B Portal": {
+    "org": "Nice-business Solutions Oy",
+    "langs": [
+    "Java",
+    "Scala",
+    "HTML/CSS",
     "JavaScript",
     "SQL"
-  ],
-  "Neter": [
-    "Lua",
+  ]},
+  "BPT": {
+    "org": "Nice-business Solutions Oy",
+    "langs": [
     "Java",
     "HTML/CSS",
-    "Python",
-    "JavaScript"
-  ],
-  "Cybercom Finland Oy": [
+    "JavaScript",
+    "SQL"
+  ]},
+  "Drupal CMS": {
+    "org": "Nice-business Solutions Oy",
+    "langs": [
+      "HTML/CSS",
+      "JavaScript",
+      "PHP"
+  ]},
+  "Drupal concept app": {
+    "org": "Cybercom Finland Oy",
+    "langs": [
+      "HTML/CSS",
+      "JavaScript",
+      "PHP"
+  ]},
+  "EURA funds management": {
+    "org": "Cybercom Finland Oy",
+    "langs": [
     "Java",
+    "Scala",
+    "Groovy",
+    "HTML/CSS",
+    "JavaScript",
+    "SQL"
+  ]},
+  "Industrial calibration": {
+    "org": "Cybercom Finland Oy",
+    "langs": [
     "JavaScript",
     "TypeScript",
-    "Python",
+    "C",
+    "Matlab/Octave"
+  ]},
+  "Machinebook": {
+    "org": "Cybercom Finland Oy",
+    "langs": [
+    "JavaScript",
+    "LaTeX"
+  ]},
+  "Innovation Zone": {
+    "org": "Cybercom Finland Oy",
+    "langs": [
+    "Java",
+    "JavaScript",
     "Matlab/Octave",
-    "Lua",
     "UnityScript",
     "R",
-    "RDF",
-    "Groovy",
     "SQL"
-  ]
+  ]},
+  "Oskari": {
+    "org": "Cybercom Finland Oy",
+    "langs": [
+    "Java",
+    "JavaScript",
+    "SQL"
+  ]},
+  "Suomi.fi": {
+    "org": "Cybercom Finland Oy",
+    "langs": [
+    "Java",
+    "JavaScript",
+    "RDF",
+    "SQL"
+  ]},
+  "Presentations": {
+    "org": "Cybercom Finland Oy",
+    "langs": [
+    "LaTeX",
+    "DOT",
+    "JavaScript",
+    "Solidity",
+    "Python"
+  ]},
+  "Hacking competitions": {
+    "org": "Cybercom Finland Oy",
+    "langs": [
+    "Python",
+    "JavaScript",
+    "HTML/CSS",
+    "DOT"
+  ]},
+  "Advisory":  {
+    "org": "Cybercom Finland Oy",
+    "langs": []
+  },
+  "NFC Cordova app": {
+    "org": "Neter",
+    "langs": [
+    "Java",
+    "JavaScript"
+  ]},
+  "A therapeutic phaser game": {
+    "org": "Neter",
+    "langs": [
+    "JavaScript"
+  ]},
+  "Research": {
+    "org": "Neter",
+    "langs": [
+    "Python",
+    "Lua",
+    "Solidity",
+    "LaTeX"
+  ]}
 };
-
-const projects = [];
 
 const epochs = {
   "1989–1994": ["Kirkon Ala-aste"],
@@ -141,20 +280,51 @@ const epochs = {
 const timeline = ["1989–1994", "1995–2000", "2001–2008", "2009–2012", "2012–"];
 
 const skills = [
-  "3D modelling"
+  "3D modeling",
+  "Tracker music",
+  "Value Creation Canvas",
+  "Full-stack",
+  "Architecture",
+  "Machine learning",
+  "Artificial intelligence",
+  "Deep learning",
+  "Signal processing",
+  "Mathematical modeling",
+  "Cryptoalgorithms",
+  "Blockchain"
 ];
 
-const tools = [];
+const tools = [
+  "Docker",
+  "Ansible",
+  "Git",
+  "Subversion",
+  "Mercurial",
+  "CVS",
+  "Confluence",
+  "Jira",
+  "Qt",
+  "React",
+  "Polymer",
+  "OSEck"
+];
 
 $(function() {
   console.log(JSON.stringify(orgs));
-  const langNodes = [... new Set(programmingLanguages.concat(Object.keys(orgs).map(k => orgs[k]).reduce((x, y) => x.concat(y), [])))];
+  const langNodes = [... new Set(
+    Object.keys(orgs).map(k => orgs[k]).reduce((x, y) => x.concat(y), []).concat(
+        Object.keys(projects).map(k => projects[k].langs).reduce((x, y) => x.concat(y), [])
+    )
+  )];
   const orgNodes = Object.keys(orgs);
   const epochNodes = Object.keys(epochs);
+  const projectNodes = Object.keys(projects);
+  
   const nodes =
     langNodes.map(l => ({id: l, label: l, group: 1})).concat(
     orgNodes.map(o => ({id: o, label: o, group: 2}))).concat(
-    epochNodes.map(e => ({id: e, label: e, group: 3})));
+    epochNodes.map(e => ({id: e, label: e, group: 3}))).concat(
+    projectNodes.map(e => ({id: e, label: e, group: 4})));
   
   const pairwiseTimeline = [];
   for (let i = 1; i < timeline.length; i++) {
@@ -162,7 +332,7 @@ $(function() {
   }
   
   const edges = Object.keys(orgs)
-    .map(o => orgs[o].map(l => [o, l]))
+    .map(o => orgs[o].map(l => [l, o]))
     .reduce((x, y) => x.concat(y), [])
     .concat(
       Object.keys(epochs)
@@ -170,6 +340,13 @@ $(function() {
       .reduce((x, y) => x.concat(y), []))
     .concat(
       pairwiseTimeline
+    )
+    .concat(
+      Object.keys(projects).map(p => projects[p].langs.map(l => [l, p]))
+      .reduce((x, y) => x.concat(y), [])
+    )
+    .concat(
+      Object.keys(projects).map(p => [projects[p].org, p])
     );
   
   const visNodes = new vis.DataSet(nodes);
@@ -182,11 +359,14 @@ $(function() {
   };
   const options = {};
   const network = new vis.Network(container, data, options);
+  network.once('stabilized', function() {
+    var scaleOption = { scale : 1.4 };
+    network.moveTo(scaleOption);
+  });
 });
 
 </script>
-<h1>Programming languages</h1>
-<p>Please note that this is work in progress, and while all information is correct, it is not necessarily exhaustive.</p>
+<h1>Timeline, Organizations, Projects, Programming languages</h1>
 <div id="vis"></div>
 </body>
 </html>
