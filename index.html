@@ -310,7 +310,6 @@ const tools = [
 ];
 
 $(function() {
-  console.log(JSON.stringify(orgs));
   const langNodes = [... new Set(
     Object.keys(orgs).map(k => orgs[k]).reduce((x, y) => x.concat(y), []).concat(
         Object.keys(projects).map(k => projects[k].langs).reduce((x, y) => x.concat(y), [])
