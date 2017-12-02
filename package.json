@@ -13,8 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/keskival/cv.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tero Keski-Valkama",
+  "license": "WTFPL",
   "bugs": {
     "url": "https://github.com/keskival/cv/issues"
   },
