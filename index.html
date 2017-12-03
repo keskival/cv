@@ -8,50 +8,83 @@
 <script type="text/javascript">
 
 const orgs = {
-  "Kirkon Ala-aste": [
-    "C64 Assembly",
-    "BASIC"
-  ],
-  "Kurikan Yläaste, Lukio": [
-    "Pascal",
-    "Java",
-    "JavaScript",
-    "SQL"
-  ],
-  "Kurikan Kaupunki": [
-  ],
-  "Turvavartiointi M. Savela Ky": [
-  ],
-  "Tampere University of Technology": [
-    "C++",
-    "Java",
-    "J",
-    "Ada",
-    "Fortran",
-    "Matlab/Octave",
-    "Lisp",
-    "Prolog",
-    "SPARC Assembly",
-    "ESSI",
-    "JavaScript",
-    "R",
-    "Perl",
-    "SQL",
-    "LaTeX",
-    "DOT"
-  ],
-  "Roboteam": [
-  ],
-  "Finnpos Systems Oy": [
-  ],
-  "Elektrobit Oyj": [
-  ],
-  "Nice-business Solutions Oy": [
-  ],
-  "Neter": [
-  ],
-  "Cybercom Finland Oy": [
-  ]
+  "Kirkon Ala-aste": {
+    "langs": [
+      "C64 Assembly",
+      "BASIC"
+    ],
+    "tools": [
+      "Commodore 64",
+      "Windows"
+    ]
+  },
+  "Kurikan Yläaste, Lukio": {
+    "langs": [
+      "Pascal",
+      "Java",
+      "JavaScript",
+      "SQL"
+    ],
+    "tools": [
+      "Windows",
+      "Linux"
+    ]
+  },
+  "Kurikan Kaupunki": {
+    "langs": [],
+    "tools": []
+  },
+  "Turvavartiointi M. Savela Ky": {
+    "langs": [],
+    "tools": []
+  },
+  "Tampere University of Technology": {
+    "langs": [
+      "C++",
+      "Java",
+      "J",
+      "Ada",
+      "Fortran",
+      "Matlab/Octave",
+      "Lisp",
+      "Prolog",
+      "SPARC Assembly",
+      "ESSI",
+      "JavaScript",
+      "R",
+      "Perl",
+      "SQL",
+      "LaTeX",
+      "DOT"
+    ],
+    "tools": [
+      "Linux"
+    ]
+  },
+  "Roboteam": {
+    "langs": [],
+    "tools": []
+  },
+  "Finnpos Systems Oy": {
+    "langs": [],
+    "tools": []
+  },
+  "Elektrobit Oyj": {
+    "langs": [],
+    "tools": []
+  },
+  "Nice-business Solutions Oy": {
+    "langs": [],
+    "tools": []
+  },
+  "Neter": {
+    "langs": [],
+    "tools": []
+  },
+  "Cybercom Finland Oy": {
+    "langs": [],
+    "tools": []
+  }
 };
 
 const projects = {
@@ -60,213 +93,381 @@ const projects = {
     "langs": [
       "JavaScript",
       "HTML/CSS"
-  ]},
+    ],
+    "tools": [
+      "Powerpoint",
+      "Windows"
+    ]
+  },
   "Programming courses for 10-14 year-olds": {
     "org": "Kurikan Kaupunki",
     "langs": [
       "Java",
       "HTML/CSS"
-  ]},
+    ],
+    "tools": [
+      "Windows",
+      "Applets"
+    ]
+  },
   "Eurobot": {
     "org": "Roboteam",
     "langs": [
-    "C++",
-    "Matlab/Octave",
-    "LaTeX"
-  ]},
+      "C++",
+      "Matlab/Octave",
+      "LaTeX"
+    ],
+    "tools": [
+      "Linux",
+      "OpenCV"
+    ]
+  },
   "Robotic Bartender": {
     "org": "Roboteam",
     "langs": [
-    "Rapid",
-    "C++",
-    "Matlab/Octave"
-  ]},
+      "Rapid",
+      "C++",
+      "Matlab/Octave",
+      "Linux"
+    ],
+    "tools": []
+  },
   "Finnpos F2": {
     "org": "Finnpos Systems Oy",
     "langs": [
-    "Dynamic C",
-    "Perl",
-    "HTML/CSS"
-  ]},
+      "Dynamic C",
+      "Perl",
+      "HTML/CSS"
+    ],
+    "tools": [
+      "CVS",
+      "Subversion",
+      "Linux"
+    ]
+  },
   "Finnpos F3": {
     "org": "Finnpos Systems Oy",
     "langs": [
-    "Java"
-  ]},
+      "Java"
+    ],
+    "tools": [
+      "CVS",
+      "Subversion",
+      "NetBeans",
+      "Linux"
+    ]
+  },
   "Linux driver, LG touchscreen": {
     "org": "Finnpos Systems Oy",
     "langs": [
-    "C"
-  ]},
+      "C"
+    ],
+    "tools": [
+      "CVS",
+      "Subversion",
+      "Linux"
+    ]
+  },
   "VoIP System": {
     "org": "Finnpos Systems Oy",
     "langs": [
-    "C++",
-    "Java"
-  ]},
+      "C++",
+      "Java"
+    ],
+    "tools": [
+      "CVS",
+      "Subversion",
+      "Eclipse",
+      "Linux",
+      "Windows"
+    ]
+  },
   "Crypto infrastructure": {
     "org": "Finnpos Systems Oy",
     "langs": [
-    "Java",
-    "SQL",
-    "LaTeX"
-  ]},
+      "Java",
+      "SQL",
+      "LaTeX"
+    ],
+    "tools": [
+      "CVS",
+      "Subversion",
+      "Eclipse",
+      "Linux"
+    ]
+  },
   "Datamike billing/accounting": {
     "org": "Turvavartiointi M. Savela Ky",
     "langs": [
-    "xBase"
-  ]},
+      "xBase"
+    ],
+    "tools": [
+      "Windows"
+    ]
+  },
   "Rene RNC HSPA": {
     "org": "Elektrobit Oyj",
     "langs": [
-    "C",
-    "Python",
-    "Perl",
-    "LaTeX",
-    "DOT"
-  ]},
+      "C",
+      "Python",
+      "Perl",
+      "LaTeX",
+      "DOT"
+    ],
+    "tools": [
+      "Subversion",
+      "DSP",
+      "OSEck",
+      "Linux"
+    ]
+  },
   "Carbook": {
     "org": "Elektrobit Oyj",
     "langs": [
-    "Java",
-    "Python",
-    "Perl",
-    "Erlang",
-    "RDF",
-    "JavaScript",
-    "SQL",
-    "LaTeX"
-  ]},
+      "Java",
+      "Python",
+      "Perl",
+      "Erlang",
+      "RDF",
+      "JavaScript",
+      "SQL",
+      "LaTeX"
+    ],
+    "tools": [
+      "Subversion",
+      "Glassfish",
+      "MySQL",
+      "Linux"
+    ]
+  },
   "Identity Federation": {
     "org": "Nice-business Solutions Oy",
     "langs": [
-    "Perl",
-    "Java",
-    "Python",
-    "HTML/CSS",
-    "Ruby",
-    "JavaScript"
-  ]},
+      "Perl",
+      "Java",
+      "Python",
+      "HTML/CSS",
+      "Ruby",
+      "JavaScript"
+    ],
+    "tools": [
+      "Subversion",
+      "Tomcat",
+      "MySQL"
+    ]
+  },
   "B2B Portal": {
     "org": "Nice-business Solutions Oy",
     "langs": [
-    "Java",
-    "Scala",
-    "HTML/CSS",
-    "JavaScript",
-    "SQL"
-  ]},
+      "Java",
+      "Scala",
+      "HTML/CSS",
+      "JavaScript",
+      "SQL"
+    ],
+    "tools": [
+      "Subversion",
+      "WebSphere",
+      "Oracle"
+    ]
+  },
   "BPT": {
     "org": "Nice-business Solutions Oy",
     "langs": [
-    "Java",
-    "HTML/CSS",
-    "JavaScript",
-    "SQL"
-  ]},
+      "Java",
+      "Scala",
+      "HTML/CSS",
+      "JavaScript",
+      "SQL"
+    ],
+    "tools": [
+      "Oracle",
+      "WebSphere",
+      "Subversion"
+    ]
+  },
   "Drupal CMS": {
     "org": "Nice-business Solutions Oy",
     "langs": [
       "HTML/CSS",
       "JavaScript",
       "PHP"
-  ]},
+    ],
+    "tools": [
+      "Drupal",
+      "Subversion",
+      "Eclipse"
+    ]
+  },
   "Drupal concept app": {
     "org": "Cybercom Finland Oy",
     "langs": [
       "HTML/CSS",
       "JavaScript",
       "PHP"
-  ]},
+    ],
+    "tools": [
+      "Git",
+      "Drupal"
+    ]
+  },
   "EURA funds management": {
     "org": "Cybercom Finland Oy",
     "langs": [
-    "Java",
-    "Scala",
-    "Groovy",
-    "HTML/CSS",
-    "JavaScript",
-    "SQL"
-  ]},
+      "Java",
+      "Scala",
+      "Groovy",
+      "HTML/CSS",
+      "JavaScript",
+      "SQL"
+    ],
+    "tools": [
+      "Git",
+      "Eclipse",
+      "Vagrant",
+      "Chef",
+      "Spring",
+      "Wicket"
+    ]
+  },
   "Industrial calibration": {
     "org": "Cybercom Finland Oy",
     "langs": [
-    "JavaScript",
-    "TypeScript",
-    "C",
-    "Matlab/Octave"
-  ]},
+      "JavaScript",
+      "TypeScript",
+      "C",
+      "Matlab/Octave"
+    ],
+    "tools": [
+      "Mercurial",
+      "Git",
+      "Eclipse"
+    ]
+  },
   "Machinebook": {
     "org": "Cybercom Finland Oy",
     "langs": [
-    "JavaScript",
-    "LaTeX"
-  ]},
+      "JavaScript",
+      "LaTeX"
+    ],
+    "tools": [
+      "Git",
+      "Eclipse"
+    ]
+  },
   "Innovation Zone": {
     "org": "Cybercom Finland Oy",
     "langs": [
-    "Java",
-    "JavaScript",
-    "Matlab/Octave",
-    "UnityScript",
-    "R",
-    "SQL"
-  ]},
+      "Java",
+      "JavaScript",
+      "Matlab/Octave",
+      "UnityScript",
+      "R",
+      "SQL"
+    ],
+    "tools": [
+      
+    ]
+  },
   "Oskari": {
     "org": "Cybercom Finland Oy",
     "langs": [
-    "Java",
-    "JavaScript",
-    "SQL"
-  ]},
+      "Java",
+      "JavaScript",
+      "SQL"
+    ],
+    "tools": [
+      
+    ]
+  },
   "Suomi.fi": {
     "org": "Cybercom Finland Oy",
     "langs": [
-    "Java",
-    "JavaScript",
-    "RDF",
-    "SQL"
-  ]},
+      "Java",
+      "JavaScript",
+      "RDF",
+      "SQL"
+    ],
+    "tools": [
+      "Ansible",
+      "Docker",
+      "ElasticSearch",
+      "React",
+      "Angular",
+      "Redis",
+      "Jena",
+      "Jira",
+      "Confluence",
+      "Vagrant"
+    ]
+  },
   "Presentations": {
     "org": "Cybercom Finland Oy",
     "langs": [
-    "LaTeX",
-    "DOT",
-    "JavaScript",
-    "Solidity",
-    "Python"
-  ]},
+      "LaTeX",
+      "DOT",
+      "JavaScript",
+      "Solidity",
+      "Python"
+    ],
+    "tools": [
+      
+    ]
+  },
   "Hacking competitions": {
     "org": "Cybercom Finland Oy",
     "langs": [
-    "Python",
-    "JavaScript",
-    "HTML/CSS",
-    "DOT"
-  ]},
+      "Python",
+      "JavaScript",
+      "HTML/CSS",
+      "DOT"
+    ],
+    "tools": [
+      "ElasticSearch",
+      "Logstash",
+      "Kibana"
+    ]
+  },
   "Advisory":  {
     "org": "Cybercom Finland Oy",
-    "langs": []
+    "langs": [],
+    "tools": [
+      
+    ]
   },
   "NFC Cordova app": {
     "org": "Neter",
     "langs": [
-    "Java",
-    "JavaScript"
-  ]},
+      "Java",
+      "JavaScript"
+    ],
+    "tools": [
+      "Cordova",
+      "Android",
+      "NFC"
+    ]
+  },
   "Therapeutic Phaser game": {
     "org": "Neter",
     "langs": [
-    "JavaScript"
-  ]},
+      "JavaScript"
+    ],
+    "tools": [
+      "Heroku"
+    ]
+  },
   "Research": {
     "org": "Neter",
     "langs": [
-    "Python",
-    "Lua",
-    "Solidity",
-    "LaTeX"
-  ]}
+      "Python",
+      "Lua",
+      "Solidity",
+      "LaTeX"
+    ],
+    "tools": [
+      "OpenShift"
+    ]
+  }
 };
 
 const epochs = {
@@ -291,12 +492,17 @@ const skills = [
   "Signal processing",
   "Mathematical modeling",
   "Cryptoalgorithms",
-  "Blockchain"
+  "Blockchain",
+  "Audio codecs",
+  "Visa POS PED",
+  ""
 ];
 
 const tools = [
   "Docker",
   "Ansible",
+  "Puppet",
+  "Vagrant",
   "Git",
   "Subversion",
   "Mercurial",
@@ -306,7 +512,53 @@ const tools = [
   "Qt",
   "React",
   "Polymer",
-  "OSEck"
+  "Angular",
+  "OSEck",
+  "Linux",
+  "Android",
+  "Tensorflow",
+  "CUDA",
+  "Torch",
+  "Jenkins",
+  "Spring",
+  "JavaEE",
+  "Oracle",
+  "MySQL",
+  "PostgreSQL",
+  "ElasticSearch",
+  "MongoDB",
+  "CouchDB",
+  "Redis",
+  "HBase",
+  "WebSphere",
+  "Tomcat",
+  "Jetty",
+  "node.js",
+  "OpenGL",
+  "WebGL",
+  "Phaser",
+  "Cordova",
+  "Ionic",
+  "Heroku",
+  "AWS",
+  "Google App Engine",
+  "RedShift",
+  "JRebel",
+  "ScalaTest",
+  "JUnit",
+  "JMeter",
+  "JSP",
+  "CWiki",
+  "OpenCV",
+  "OpenLayers",
+  "Velocity",
+  "Wicket",
+  "VmWare",
+  "Jena",
+  "XMPP",
+  "Ejabberd",
+  "GCC",
+  "NFC"
 ];
 
 let showLanguages = true, showOrgs = true, showProjects = true, showEpochs = true;
@@ -338,7 +590,7 @@ function getEpochConnections() {
       .reduce((x, y) => x.concat(y), [])
       .concat(pairwiseTimeline);
   } else if (showProjects) {
-    const fromEpochsToOrgsToLangs = Object.keys(epochs).map(e => [... new Set(epochs[e].map(o => orgs[o]).reduce((x, y) => x.concat(y), [])
+    const fromEpochsToOrgsToLangs = Object.keys(epochs).map(e => [... new Set(epochs[e].map(o => orgs[o].langs).reduce((x, y) => x.concat(y), [])
       .map(l => [l, e]))])
       .reduce((x, y) => x.concat(y), []);
     const fromEpochsToProjects = Object.keys(epochs)
@@ -354,7 +606,7 @@ function getEpochConnections() {
         epochs[e].map(o => fromOrgToProjects.get(o)).reduce((x, y) => x.concat(y), []).filter(p => p != null)
           .map(p => projects[p].langs).reduce((x, y) => x.concat(y), [])
         .concat(
-            epochs[e].map(o => orgs[o]).reduce((x, y) => x.concat(y), [])
+            epochs[e].map(o => orgs[o].langs).reduce((x, y) => x.concat(y), [])
         )
       )].map(l => [l, e]);
     };
@@ -375,7 +627,7 @@ function getOrganizationConnections() {
   let languagesEdges = [];
   if (showLanguages) {
     languagesEdges = Object.keys(orgs)
-      .map(o => orgs[o].map(l => [l, o]))
+      .map(o => orgs[o].langs.map(l => [l, o]))
       .reduce((x, y) => x.concat(y), []);
   }
   
@@ -411,7 +663,7 @@ function redraw() {
   showLanguages = $("#cbLanguages").is(":checked");
   
   const langNodes = [... new Set(
-      Object.keys(orgs).map(k => orgs[k]).reduce((x, y) => x.concat(y), []).concat(
+      Object.keys(orgs).map(o => orgs[o].langs).reduce((x, y) => x.concat(y), []).concat(
           Object.keys(projects).map(k => projects[k].langs).reduce((x, y) => x.concat(y), [])
       ).filter(_ => showLanguages)
     )];
