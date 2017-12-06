@@ -746,7 +746,14 @@ function redraw() {
   const visNodes = new vis.DataSet(visibleNodes.map(n => ({id: n.id, label: n.id, group: n.group})));
 
   const visEdges = new vis.DataSet(
-      visibleNodes.map(n => getChildrenFor(n.id).map(c => ({from: n.id, to: c}))).reduce((x, y) => x.concat(y), []));
+      visibleNodes.map(n => getChildrenFor(n.id).map(c => {
+        if (nodeForId.get(c).tier != n.tier) {
+          return {from: c, to: n.id};
+        } else {
+          // Epoch-to-epoch connections.
+          return {from: n.id, to: c};
+        }
+      })).reduce((x, y) => x.concat(y), []));
 
   // create a network
   const container = document.getElementById('vis');
