@@ -684,8 +684,6 @@ const tools = [
   "Lightwave"
 ];
 
-let showLanguages = true, showOrgs = true, showProjects = true, showEpochs = true;
-
 Object.keys(projects).forEach(p => {orgs[projects[p].org].projects = [];});
 Object.keys(projects).forEach(p => {orgs[projects[p].org].projects.push(p);});
 
@@ -741,6 +739,8 @@ function redraw() {
   tiers[1].visible = $("#cbOrgs").is(":checked");
   tiers[2].visible = $("#cbProjects").is(":checked");
   tiers[3].visible = $("#cbLanguages").is(":checked");
+  tiers[4].visible = $("#cbTools").is(":checked");
+  tiers[5].visible = $("#cbSkills").is(":checked");
   
   const visibleNodes = allNodes.filter(n => tiers[n.tier].visible);
   const visNodes = new vis.DataSet(visibleNodes.map(n => ({id: n.id, label: n.id, group: n.group})));
@@ -775,6 +775,8 @@ $(function() {
   $("#cbOrgs").change(() => {redraw();});
   $("#cbProjects").change(() => {redraw();});
   $("#cbLanguages").change(() => {redraw();});
+  $("#cbTools").change(() => {redraw();});
+  $("#cbSkills").change(() => {redraw();});
 });
 
 </script>
@@ -785,6 +787,8 @@ $(function() {
 <label><input type="checkbox" id="cbOrgs" checked />Organizations</label> 
 <label><input type="checkbox" id="cbProjects" checked />Projects</label> 
 <label><input type="checkbox" id="cbLanguages" checked />Languages</label> 
+<label><input type="checkbox" id="cbTools" />Tools</label> 
+<label><input type="checkbox" id="cbSkills" />Skills</label> 
 </p>
 <div id="vis" style="height: 100%"></div>
 </div>
