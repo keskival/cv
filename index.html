@@ -157,6 +157,33 @@ const orgs = {
     "langs": [],
     "tools": [],
     "skills": []
+  },
+  "Sentido X-Tech Oy": {
+    "langs": [
+      "Python",
+      "C++",
+      "JavaScript"
+    ],
+    "tools": [
+      "Linux",
+      "Tensorflow",
+      "Slack",
+      "Git",
+      "Trello",
+      "node.js",
+      "Azure",
+      "Docker"
+    ],
+    "skills": [
+      "Full-stack",
+      "Architecture",
+      "Machine learning",
+      "Artificial intelligence",
+      "Deep learning",
+      "Signal processing",
+      "Project management",
+      "Machine vision"
+    ]
   }
 };
 
@@ -210,7 +237,8 @@ const projects = {
       "Robotics",
       "Architecture",
       "Artificial intelligence",
-      "Signal processing"
+      "Signal processing",
+      "Machine vision"
     ]
   },
   "Robotic Bartender": {
@@ -250,7 +278,8 @@ const projects = {
       "Architecture",
       "Embedded systems",
       "Visa POS PED",
-      "ISO 9001:2000"
+      "ISO 9001:2000",
+      "Project management"
     ]
   },
   "Finnpos F3": {
@@ -269,7 +298,8 @@ const projects = {
       "Cryptography",
       "Architecture",
       "Desktop apps",
-      "ISO 9001:2000"
+      "ISO 9001:2000",
+      "Project management"
     ]
   },
   "Linux driver, LG touchscreen": {
@@ -285,7 +315,8 @@ const projects = {
       "GCC"
     ],
     "skills": [
-      "Driver programming"
+      "Driver programming",
+      "Project management"
     ]
   },
   "VoIP System": {
@@ -306,7 +337,8 @@ const projects = {
     "skills": [
       "Architecture",
       "Audio codecs",
-      "Signal processing"
+      "Signal processing",
+      "Project management"
     ]
   },
   "Crypto infrastructure": {
@@ -328,7 +360,9 @@ const projects = {
       "Architecture",
       "Cryptography",
       "Certificates",
-      "ISO 9001:2000"    ]
+      "ISO 9001:2000",
+      "Project management"
+    ]
   },
   "Datamike billing/accounting": {
     "org": "Turvavartiointi M. Savela Ky",
@@ -899,10 +933,11 @@ const epochs = {
   "1995–2000": ["Kurikan Yläaste, Lukio", "Kurikan Kaupunki", "Turvavartiointi M. Savela Ky"],
   "2001–2008": ["Roboteam", "Finnpos Systems Oy", "Tampere University of Technology", "Elektrobit Oyj"],
   "2009–2012": ["Elektrobit Oyj", "Nice-business Solutions Oy", "Neter"],
-  "2012–": ["Neter", "Cybercom Finland Oy"]
+  "2012–2018": ["Neter", "Cybercom Finland Oy"],
+  "2018–": ["Neter", "Cybercom Finland Oy", "Sentido X-Tech Oy"]
 };
 
-const timeline = ["1989–1994", "1995–2000", "2001–2008", "2009–2012", "2012–"];
+const timeline = ["1989–1994", "1995–2000", "2001–2008", "2009–2012", "2012–2017", "2018–"];
 
 Object.keys(projects).forEach(p => {orgs[projects[p].org].projects = [];});
 Object.keys(projects).forEach(p => {orgs[projects[p].org].projects.push(p);});
