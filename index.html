@@ -184,6 +184,36 @@ const orgs = {
       "Project management",
       "Machine vision"
     ]
+  },
+  "HERE Technologies": {
+    "langs": [
+      "Python",
+      "JavaScript"
+    ],
+    "tools": [
+      "Linux",
+      "Tensorflow",
+      "Git",
+      "AWS",
+      "Docker",
+      "Redash",
+      "Spark"
+    ],
+    "skills": [
+      "Full-stack",
+      "Architecture",
+      "Machine learning",
+      "Artificial intelligence",
+      "Deep learning",
+      "Probabilistic inference",
+      "Information theory",
+      "Mathematical modeling",
+      "Reinforcement learning",
+      "Generative Adversarial Networks",
+      "Variational models",
+      "Mixture Density Networks",
+      "Public speaking"
+    ]
   }
 };
 
@@ -428,7 +458,9 @@ const projects = {
     "skills": [
       "Full-stack",
       "Architecture",
-      "Semantic web"
+      "Semantic web",
+      "Geographic Information Systems",
+      "GPS"
     ]
   },
   "Identity Federation": {
@@ -518,7 +550,8 @@ const projects = {
     ],
     "skills": [
       "Full-stack",
-      "Architecture"
+      "Architecture",
+      "Geographic Information Systems"
     ]
   },
   "Drupal CMS": {
@@ -693,7 +726,8 @@ const projects = {
       "Machine learning",
       "Artificial intelligence",
       "Deep learning",
-      "Signal processing"
+      "Signal processing",
+      "Geographic Information Systems"
     ]
   },
   "Oskari": {
@@ -723,7 +757,8 @@ const projects = {
     ],
     "skills": [
       "Full-stack",
-      "Architecture"
+      "Architecture",
+      "Geographic Information Systems"
     ]
   },
   "Suomi.fi": {
@@ -790,7 +825,7 @@ const projects = {
       "Machine learning",
       "Artificial intelligence",
       "Deep learning",
-      "Training"
+      "Public speaking"
     ]
   },
   "Hacking competitions": {
@@ -923,7 +958,9 @@ const projects = {
       "Artificial intelligence",
       "Deep learning",
       "Blockchain",
-      "Signal processing"
+      "Signal processing",
+      "Geographic Information Systems",
+      "GPS"
     ]
   }
 };
@@ -934,7 +971,7 @@ const epochs = {
   "2001–2008": ["Roboteam", "Finnpos Systems Oy", "Tampere University of Technology", "Elektrobit Oyj"],
   "2009–2012": ["Elektrobit Oyj", "Nice-business Solutions Oy", "Neter"],
   "2012–2018": ["Neter", "Cybercom Finland Oy"],
-  "2018–": ["Neter", "Cybercom Finland Oy", "Sentido X-Tech Oy"]
+  "2018–": ["Neter", "Cybercom Finland Oy", "Sentido X-Tech Oy", "HERE Technologies"]
 };
 
 const timeline = ["1989–1994", "1995–2000", "2001–2008", "2009–2012", "2012–2017", "2018–"];
@@ -998,7 +1035,7 @@ function redraw() {
   tiers[3].visible = $("#cbLanguages").is(":checked");
   tiers[4].visible = $("#cbTools").is(":checked");
   tiers[5].visible = $("#cbSkills").is(":checked");
-  
+
   const visibleNodes = allNodes.filter(n => tiers[n.tier].visible);
   const visNodes = new vis.DataSet(visibleNodes.map(n => ({id: n.id, label: n.id, group: n.group})));
 
@@ -1041,12 +1078,12 @@ $(function() {
 <div style="height: 100%">
 <h1>The Interactive CV Graph of Tero Keski-Valkama</h1>
 <p><a href="https://github.com/keskival/cv/raw/master/docs/cv_eng.pdf">CV</a></p>
-<p><label><input type="checkbox" id="cbEpochs" checked />Epochs</label> 
-<label><input type="checkbox" id="cbOrgs" />Organizations</label> 
-<label><input type="checkbox" id="cbProjects" />Projects</label> 
-<label><input type="checkbox" id="cbLanguages" checked />Languages</label> 
-<label><input type="checkbox" id="cbTools" />Tools</label> 
-<label><input type="checkbox" id="cbSkills" checked />Skills</label> 
+<p><label><input type="checkbox" id="cbEpochs" checked />Epochs</label>
+<label><input type="checkbox" id="cbOrgs" />Organizations</label>
+<label><input type="checkbox" id="cbProjects" />Projects</label>
+<label><input type="checkbox" id="cbLanguages" checked />Languages</label>
+<label><input type="checkbox" id="cbTools" />Tools</label>
+<label><input type="checkbox" id="cbSkills" checked />Skills</label>
 </p>
 <div class="loader" id="spinner"></div>
 <div id="vis" style="height: 100%"></div>
