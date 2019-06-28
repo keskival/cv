@@ -147,7 +147,9 @@ const orgs = {
       "Redash",
       "Spark",
       "Kubernetes",
-      "Kubeflow"
+      "Kubeflow",
+      "React",
+      "Konva.js"
     ],
     "skills": [
       "Full-stack",
@@ -162,7 +164,8 @@ const orgs = {
       "Generative Adversarial Networks",
       "Variational models",
       "Mixture Density Networks",
-      "Public speaking"
+      "Public speaking",
+      "Game development"
     ]
   }
 };
@@ -864,7 +867,8 @@ const projects = {
     ],
     "skills": [
       "Full-stack",
-      "Architecture"
+      "Architecture",
+      "Game development"
     ]
   },
   "Research": {
