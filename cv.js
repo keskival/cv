@@ -149,7 +149,9 @@ const orgs = {
       "Kubernetes",
       "Kubeflow",
       "React",
-      "Konva.js"
+      "Konva.js",
+      "Kafka",
+      "Protobuf"
     ],
     "skills": [
       "Full-stack",
