@@ -145,6 +145,7 @@ const orgs = {
       "AWS",
       "Docker",
       "Redash",
+      "Drill",
       "Spark",
       "Kubernetes",
       "Kubeflow",
