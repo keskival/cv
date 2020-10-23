@@ -152,7 +152,11 @@ const orgs = {
       "React",
       "Konva.js",
       "Kafka",
-      "Protobuf"
+      "Protobuf",
+      "AWS Lambda",
+      "AWS Fargate",
+      "Flask",
+      "Jupyter"
     ],
     "skills": [
       "Full-stack",
@@ -167,8 +171,11 @@ const orgs = {
       "Generative Adversarial Networks",
       "Variational models",
       "Mixture Density Networks",
+      "Attentional models",
       "Public speaking",
-      "Game development"
+      "Game development",
+      "Serverless",
+      "Geographic Information Systems"
     ]
   }
 };
