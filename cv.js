@@ -136,7 +136,8 @@ const orgs = {
   "HERE Technologies": {
     "langs": [
       "Python",
-      "JavaScript"
+      "JavaScript",
+      "C++"
     ],
     "tools": [
       "Linux",
@@ -156,7 +157,8 @@ const orgs = {
       "AWS Lambda",
       "AWS Fargate",
       "Flask",
-      "Jupyter"
+      "Jupyter",
+      "PyTorch"
     ],
     "skills": [
       "Full-stack",
@@ -175,7 +177,10 @@ const orgs = {
       "Public speaking",
       "Game development",
       "Serverless",
-      "Geographic Information Systems"
+      "Geographic Information Systems",
+      "Transformers",
+      "Graph Convolutional Neural Networks",
+      "Metric learning"
     ]
   }
 };
