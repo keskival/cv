@@ -182,6 +182,23 @@ const orgs = {
       "Graph Convolutional Neural Networks",
       "Metric learning"
     ]
+  },
+  "A Stealth Mode Start-up": {
+    "langs": [
+      "JavaScript",
+    ],
+    "tools": [
+      "Linux",
+      "Git",
+      "AWS",
+      "Docker",
+      "React",
+      "AWS Elastic Beanstalk",
+      "node.js",
+    ],
+    "skills": [
+      "Recruitment",
+    ]
   }
 };
 
@@ -592,7 +609,7 @@ const projects = {
       "Architecture"
     ]
   },
-  "Industrial calibration": {
+  "Outocal industrial calibration": {
     "org": "Cybercom Finland Oy",
     "langs": [
       "JavaScript",
@@ -932,7 +949,130 @@ const projects = {
       "GPS",
       "Mixture Density Networks"
     ]
-  }
+  },
+  "Internal Machine Learning Competitions": {
+    "org": "HERE Technologies",
+    "langs": [
+      "Python",
+    ],
+    "tools": [
+      "Redash",
+      "Drill",
+      "AWS",
+      "AWS Lambda",
+      "Kubernetes",
+    ],
+    "skills": [
+      "Machine learning",
+      "Artificial intelligence",
+      "Deep learning",
+      "Convolutional Neural Networks",
+      "Attentional models",
+    ]
+  },
+  "ETA Estimation Without Maps": {
+    "org": "HERE Technologies",
+    "langs": [
+      "Python",
+    ],
+    "tools": [
+      "TensorFlow",
+      "Flask",
+      "Redash",
+      "Drill",
+      "AWS",
+      "XGBoost",
+    ],
+    "skills": [
+      "Machine learning",
+      "Artificial intelligence",
+      "Deep learning",
+    ]
+  },
+  "Deep Reinforcement Learning Scaling": {
+    "org": "HERE Technologies",
+    "langs": [
+      "Python",
+    ],
+    "tools": [
+      "TensorFlow",
+      "Protobuf",
+      "Redash",
+      "Drill",
+      "AWS",
+      "Kubernetes",
+    ],
+    "skills": [
+      "Machine learning",
+      "Artificial intelligence",
+      "Deep learning",
+      "Deep reinforcement learning",
+      "Convolutional Neural Networks",
+    ]
+  },
+  "Deep Reinforcement Learning Fleet Management Logistics": {
+    "org": "HERE Technologies",
+    "langs": [
+      "Python",
+      "JavaScript",
+    ],
+    "tools": [
+      "TensorFlow",
+      "Flask",
+      "Protobuf",
+      "Redash",
+      "Drill",
+      "AWS",
+      "Kubernetes",
+    ],
+    "skills": [
+      "Machine learning",
+      "Artificial intelligence",
+      "Deep learning",
+      "Deep reinforcement learning",
+      "Convolutional Neural Networks",
+    ]
+  },
+  "Deep Reinforcement Learning Navigation by Simulated Street Level Imagery": {
+    "org": "HERE Technologies",
+    "langs": [
+      "Python",
+    ],
+    "tools": [
+      "PyTorch",
+      "Protobuf",
+      "Redash",
+      "Drill",
+      "AWS",
+      "Kubernetes",
+    ],
+    "skills": [
+      "Machine learning",
+      "Artificial intelligence",
+      "Deep learning",
+      "Deep reinforcement learning",
+    ]
+  },
+  "Attentional Models for Sparse Sensor Data and Automatic Mapping": {
+    "org": "HERE Technologies",
+    "langs": [
+      "Python",
+    ],
+    "tools": [
+      "PyTorch",
+      "Redash",
+      "Drill",
+      "AWS",
+      "AWS Athena",
+      "Kubernetes",
+    ],
+    "skills": [
+      "Machine learning",
+      "Artificial intelligence",
+      "Deep learning",
+      "Attentional models",
+    ]
+  },
 };
 
 const epochs = {
@@ -941,7 +1081,8 @@ const epochs = {
   "2001–2008": ["Roboteam", "Finnpos Systems Oy", "Tampere University of Technology", "Elektrobit Oyj"],
   "2009–2012": ["Elektrobit Oyj", "Nice-business Solutions Oy", "Neter"],
   "2012–2018": ["Neter", "Cybercom Finland Oy"],
-  "2018–": ["Neter", "Cybercom Finland Oy", "Sentido X-Tech Oy", "HERE Technologies"]
+  "2018–2022": ["Neter", "Sentido X-Tech Oy", "HERE Technologies"],
+  "2022–": ["A Stealth Mode Start-up"],
 };
 
 const timeline = ["1989–1994", "1995–2000", "2001–2008", "2009–2012", "2012–2017", "2018–"];
