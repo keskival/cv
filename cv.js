@@ -130,7 +130,7 @@ const orgs = {
       "Deep learning",
       "Signal processing",
       "Project management",
-      "Machine vision"
+      "Machine vision",
     ]
   },
   "HERE Technologies": {
@@ -156,6 +156,7 @@ const orgs = {
       "Protobuf",
       "AWS Lambda",
       "AWS Fargate",
+      "AWS EKS",
       "Flask",
       "Jupyter",
       "PyTorch"
@@ -180,7 +181,8 @@ const orgs = {
       "Geographic Information Systems",
       "Transformers",
       "Graph Convolutional Neural Networks",
-      "Metric learning"
+      "Metric learning",
+      "Patenting",
     ]
   },
   "A Stealth Mode Start-up": {
@@ -195,6 +197,7 @@ const orgs = {
       "React",
       "AWS Elastic Beanstalk",
       "node.js",
+      "Mermaid",
     ],
     "skills": [
       "Recruitment",
@@ -960,7 +963,10 @@ const projects = {
       "Drill",
       "AWS",
       "AWS Lambda",
+      "AWS Fargate",
       "Kubernetes",
+      "AWS EKS",
+      "Docker",
     ],
     "skills": [
       "Machine learning",
@@ -993,6 +999,7 @@ const projects = {
     "org": "HERE Technologies",
     "langs": [
       "Python",
+      "C++",
     ],
     "tools": [
       "TensorFlow",
@@ -1001,6 +1008,8 @@ const projects = {
       "Drill",
       "AWS",
       "Kubernetes",
+      "AWS EKS",
+      "Docker",
     ],
     "skills": [
       "Machine learning",
@@ -1015,6 +1024,7 @@ const projects = {
     "langs": [
       "Python",
       "JavaScript",
+      "C++",
     ],
     "tools": [
       "TensorFlow",
@@ -1024,6 +1034,8 @@ const projects = {
       "Drill",
       "AWS",
       "Kubernetes",
+      "AWS EKS",
+      "Docker",
     ],
     "skills": [
       "Machine learning",
@@ -1045,12 +1057,15 @@ const projects = {
       "Drill",
       "AWS",
       "Kubernetes",
+      "AWS EKS",
+      "Docker",
     ],
     "skills": [
       "Machine learning",
       "Artificial intelligence",
       "Deep learning",
       "Deep reinforcement learning",
+      "Convolutional Neural Networks",
     ]
   },
   "Attentional Models for Sparse Sensor Data and Automatic Mapping": {
@@ -1065,12 +1080,16 @@ const projects = {
       "AWS",
       "AWS Athena",
       "Kubernetes",
+      "AWS EKS",
+      "Docker",
     ],
     "skills": [
       "Machine learning",
       "Artificial intelligence",
       "Deep learning",
       "Attentional models",
+      "Set Transformers",
+      "Patenting",
     ]
   },
 };
