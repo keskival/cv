@@ -202,6 +202,32 @@ const orgs = {
     "skills": [
       "Recruitment",
     ]
+  },
+  "Alloy": {
+    "langs": [
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "SQL"
+    ],
+    "tools": [
+      "Linux",
+      "Git",
+      "Google Cloud",
+      "Docker",
+      "React",
+      "JavaEE",
+      "Mermaid",
+      "BigQuery",
+      "PostgreSQL",
+      "Redux",
+      "Redis"
+    ],
+    "skills": [
+      "Big data",
+      "Time series",
+      "Caching",
+    ]
   }
 };
 
@@ -1101,7 +1127,7 @@ const epochs = {
   "2009–2012": ["Elektrobit Oyj", "Nice-business Solutions Oy", "Neter"],
   "2012–2018": ["Neter", "Cybercom Finland Oy"],
   "2018–2022": ["Neter", "Sentido X-Tech Oy", "HERE Technologies"],
-  "2022–": ["Neter", "A Stealth Mode Start-up"],
+  "2022–": ["Neter", "A Stealth Mode Start-up", "Alloy"],
 };
 
 const timeline = ["1989–1994", "1995–2000", "2001–2008", "2009–2012", "2012–2017", "2018–"];
